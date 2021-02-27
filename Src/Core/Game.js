@@ -1,17 +1,29 @@
 class Game {
-    constructor({frameRate}){
+    constructor({frameRate,gameObjects}){
+        this.gameObjects = [];
         this.startGame();
         this.frameRate = frameRate;
-        //this.run();
+        this.instantiateAllObjects(gameObjects);
+        this.run();
     }
 
     startGame(){}
 
-    updategame(){}
+    updategame(){
+        this.gameObjects.forEach((gameObeject) => {
+            gameObeject.update();
+        })
+    }
 
-    instantiateObject(){}
+    instantiateObject(gameObejct){
+        this.gameObjects.push(gameObejct);
+    }
 
-    instantiateAllObjects(){}
+    instantiateAllObjects(gameObjects){
+        gameObjects.forEach((element) => {
+            this.instantiateObject(element);
+        });
+    }
 
     render(){}
 
@@ -25,6 +37,9 @@ class Game {
 
 class Object {
     constructor(){
+        this.position = {x: 0, y:0};
+        this.scale = {x: 0, y: 0};
+        this.start();
 
     }
 
@@ -33,12 +48,8 @@ class Object {
     }
 
     update(){
-
+        console.log(Math.random());
     }
-}
-
-class Player extends Object{
-
 }
 
 
