@@ -4,7 +4,6 @@ class Game {
         this.canvas = canvas; 
         this.input = new Input(); 
         this.startGame(gameObjects);
-        this.updateGame();
         this.run();
     }
 
