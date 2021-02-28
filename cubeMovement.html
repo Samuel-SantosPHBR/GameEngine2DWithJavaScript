@@ -11,6 +11,8 @@
     </body>
 
     <script src="./src/Core/Game.js"></script>
+    <script src="./src/Core/Input.js"></script>
+    <script src="./src/Core/object/Object.js"></script>
     <script>
 
         class Player1 extends Object{
@@ -30,7 +32,7 @@
                     this.valueY = 1;
                 if(this.Game.input.getInput('w'))
                     this.valueY = -1;
-                
+
                 if(this.valueX!=0 || this.valueY!=0){
                     this.position.x+=this.valueX*this.speed;
                     this.position.y+=this.valueY*this.speed;
