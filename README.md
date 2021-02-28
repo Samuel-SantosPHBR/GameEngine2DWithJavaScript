@@ -10,4 +10,4 @@ Como Usar?
 
 <p>Nessa pasta encontramos o sistema de Input, Game e Objects que são necessários para o desenvolvimento de um Game basico, novas funcionalidades serão adicionadas na Engine com o passar do tempo, caso deseje apenas usar a engine.</p>
 
-<img src="src/infos/example1.png" />
+<img src="Src/infos/example1.png" />
