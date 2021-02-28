@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+        <canvas id="MyEngine2dCanvas" width="800" height="600" style="border:1px solid black;"></canvas>
+    </body>
+
+    <script src="./src/Core/Game.js"></script>
+    <script>
+
+        class Player1 extends Object{
+            start(){
+                this.speed = 3;
+                this.valueX = 0;
+                this.valueY = 0;
+            }
+            update(){
+                this.valueX = 0;
+                this.valueY = 0;
+                if(this.Game.input.getInput('d'))
+                    this.valueX = 1;
+                if(this.Game.input.getInput('a'))
+                    this.valueX = -1;
+                if(this.Game.input.getInput('s'))
+                    this.valueY = 1;
+                if(this.Game.input.getInput('w'))
+                    this.valueY = -1;
+                
+                if(this.valueX!=0 || this.valueY!=0){
+                    this.position.x+=this.valueX*this.speed;
+                    this.position.y+=this.valueY*this.speed;
+                }
+            }
+        }
+        const Player = new Player1({positionX: 1,positionY: 1,ScaleX:30,ScaleY:30});
+
+        const canvas = document.getElementById('MyEngine2dCanvas');
+        const contextoCanvas = canvas.getContext('2d');
+
+        const game = new Game({
+            gameObjects: [Player],
+            canvas: contextoCanvas
+        })
+
+        
+    </script>
+</html>
