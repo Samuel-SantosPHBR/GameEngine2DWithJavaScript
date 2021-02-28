@@ -6,9 +6,9 @@
 
 Como Usar?
 
-<h2>Primeiro é necessario Importa os Scripts do Core da Engine presentes na pasta <strong>src/core</strong</h2>
+<h2>Primeiro é necessario Importa os Scripts do Core da Engine presentes na pasta <strong>src/core</strong></h2>
   <br>
 
-<p>Nessa pasta encontramos o sistema de Input, Game e Objects que são necessários para o desenvolvimento de um Game basico, novas funcionalidades serão adicionadas na Engine com o passar do tempo, caso deseje apenas usar a engine.</p>
+Nessa pasta encontramos o sistema de Input, Game e Objects que são necessários para o desenvolvimento de um Game basico, novas funcionalidades serão adicionadas na Engine com o passar do tempo, caso deseje apenas usar a engine.</p>
 
 <img src="Src/infos/example1.PNG" />
