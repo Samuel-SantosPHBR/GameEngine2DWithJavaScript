@@ -1,0 +1,5 @@
+class Collision {
+
+    getCollision(gameObject){}
+
+}

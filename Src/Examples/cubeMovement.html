@@ -12,7 +12,9 @@
 
     <script src="./../Core/Game.js"></script>
     <script src="./../Core/Input.js"></script>
+    <script src="./../Core/Collision.js"></script>
     <script src="./../Core/object/Object.js"></script>
+    <script src="./../Core/object/ImageObject.js"></script>
     <script>
         class Player1 extends Object{
             start(){
@@ -38,11 +40,21 @@
                 }
             }
         }
-        const Player = new Player1({positionX: 1,positionY: 1,ScaleX:30,ScaleY:30});
+
+        const block = new ImageObject({positionX: 0,positionY: 500,ScaleX:100,ScaleY:100,image:'imageExemplo.jpeg'})
+        const block1 = new ImageObject({positionX: 100,positionY: 500,ScaleX:100,ScaleY:100,image:'imageExemplo.jpeg'})
+        const block2 = new ImageObject({positionX: 200,positionY: 500,ScaleX:100,ScaleY:100,image:'imageExemplo.jpeg'})
+        const block3 = new ImageObject({positionX: 300,positionY: 500,ScaleX:100,ScaleY:100,image:'imageExemplo.jpeg'})
+        const block4 = new ImageObject({positionX: 400,positionY: 500,ScaleX:100,ScaleY:100,image:'imageExemplo.jpeg'})
+        const block5 = new ImageObject({positionX: 500,positionY: 500,ScaleX:100,ScaleY:100,image:'imageExemplo.jpeg'})
+        const block6 = new ImageObject({positionX: 600,positionY: 500,ScaleX:100,ScaleY:100,image:'imageExemplo.jpeg'})
+        const block7 = new ImageObject({positionX: 700,positionY: 500,ScaleX:100,ScaleY:100,image:'imageExemplo.jpeg'})
+
+        const Player = new Player1({positionX: 1,positionY: 470,ScaleX:30,ScaleY:30});
         const canvas = document.getElementById('MyEngine2dCanvas');
         const contextoCanvas = canvas.getContext('2d');
         const game = new Game({
-            gameObjects: [Player],
+            gameObjects: [Player,block,block1,block2,block3,block4,block5,block6,block7],
             canvas: contextoCanvas
         })
     </script>

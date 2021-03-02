@@ -3,6 +3,7 @@ class Game {
         this.gameObjects = [];
         this.canvas = canvas; 
         this.input = new Input(); 
+        this.collision = new Collision();
         this.startGame(gameObjects);
         this.run();
     }
@@ -41,7 +42,7 @@ class Game {
     drawObjects(){
         this.canvas.beginPath();
         this.gameObjects.forEach((gameobject)=>{
-            this.canvas.rect(gameobject.position.x,gameobject.position.y,gameobject.scale.x,gameobject.scale.y)
+            gameobject.render();
         })
         this.canvas.stroke();
     }
@@ -55,7 +56,3 @@ class Game {
         })
     }
 }
-
-
-
-
